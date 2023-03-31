@@ -12,15 +12,18 @@ main {
 
 .left_header {
    height: 4.5rem;
+   cursor:default;
 }
 
 .user img {
    border-radius: 50%;
+   cursor: pointer;
 }
 
 .left_icons i {
    padding-left: 1rem;
    font-size: 1.3rem;
+   cursor: pointer;
 }
 
 .right_chat {
