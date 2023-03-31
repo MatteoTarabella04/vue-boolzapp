@@ -10,6 +10,14 @@ main {
    width: 30%;
 }
 
+.left_header {
+   height: 4.5rem;
+}
+
 .right_chat {
    width: calc(100% - 30%);
+}
+
+.right_header {
+   height: 4.5rem;
 }
