@@ -1,0 +1,15 @@
+body {
+   font-family: sans-serif;
+}
+
+main {
+   height: 100vh;
+}
+
+.left_contacts {
+   width: 30%;
+}
+
+.right_chat {
+   width: calc(100% - 30%);
+}
