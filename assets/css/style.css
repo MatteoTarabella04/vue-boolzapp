@@ -91,3 +91,13 @@ main {
    height: 4.5rem;
    background-color: var(--bg-input-chat);
 }
+
+.text_area i {
+   font-size: 1.5rem;
+   cursor: pointer;
+}
+
+.text_section input {
+   width: 45rem;
+   padding: 0.8rem;
+}
