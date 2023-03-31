@@ -25,7 +25,7 @@
 
          <main id="site_main">
             <div class="container h-100 p-4 d-flex">
-               <div class="left_contacts bg-dark h-100">
+               <div class="left_contacts h-100">
                   <div class="left_header d-flex align-items-center
                      justify-content-between border-end p-2">
                      <div class="user">
@@ -56,10 +56,27 @@
                         <span class="input-group-text bg-white border-0">
                            <i class="fa fa-search" aria-hidden="true"></i>
                         </span>
-                        <input type="text" class="form-control border-0" placeholder="Cerca o inizia una nuova chat">
+                        <input type="text" class="form-control border-0"
+                           placeholder="Cerca o inizia una nuova chat">
 
                      </div>
                   </div>
+                  <ul class="list-unstyled contacts">
+                     <li v-for="(contact, i) in contacts">
+                        <div class="contact border-bottom border-secondary
+                           border-opacity-25 d-flex align-items-center p-2
+                           bg-light">
+                           <div class="user">
+                              <img width="50" :src="'./assets' + contact.avatar" alt="">
+                           </div>
+                           <div class="user_info">
+                              <span class="px-3 m-0">{{contact.name}}</span><br>
+                              <span class="px-3 last_message text-secondary
+                                 text-opacity-75">Ultimo messaggio</span>
+                           </div>
+                        </div>
+                     </li>
+                  </ul>
                </div>
                <div class="right_chat bg-danger">
                   <div class="right_header">

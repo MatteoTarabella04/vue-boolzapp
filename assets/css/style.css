@@ -57,6 +57,20 @@ main {
 
 .search_section {
    background-color: var(--bg-headers);
+   height: 3rem;
+}
+
+.contacts {
+   height: calc(100% - 12rem);
+   overflow-y: auto;
+}
+
+.contact {
+   height: 4.5rem;
+}
+
+.last_message {
+   font-size: 0.7rem;
 }
 
 .right_chat {
