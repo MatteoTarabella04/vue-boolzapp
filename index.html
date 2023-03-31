@@ -24,75 +24,83 @@
       <div id="app">
 
          <main id="site_main">
-            <div class="container h-100 p-4 d-flex">
-               <div class="left_contacts h-100">
-                  <div class="left_header d-flex align-items-center
-                     justify-content-between border-end p-2">
-                     <div class="user">
-                        <img width="50" src="./assets/img/avatar_io.jpg" alt=""
-                           class="img-fluid">
-                        <b class="ps-1">Sofia</b>
+            <div class="container h-100 p-4">
+               <div class="frame h-100 d-flex shadow">
+                  <div class="left_contacts h-100">
+                     <div class="left_header d-flex align-items-center
+                        justify-content-between border-end p-2">
+                        <div class="user">
+                           <img width="50" src="./assets/img/avatar_io.jpg" alt=""
+                              class="img-fluid">
+                           <b class="ps-1">Sofia</b>
+                        </div>
+                        <div class="header_icons text-secondary">
+                           <i class="fas fa-circle-notch"></i>
+                           <i class="fas fa-message"></i>
+                           <i class="fas fa-ellipsis-v"></i>
+                        </div>
                      </div>
-                     <div class="header_icons text-secondary">
-                        <i class="fas fa-circle-notch"></i>
-                        <i class="fas fa-message"></i>
-                        <i class="fas fa-ellipsis-v"></i>
+                     <div class="notify_banner d-flex align-items-center p-3">
+                        <div class="bell rounded-circle bg-white">
+                           <i class="fa fa-bell-slash" aria-hidden="true"></i>
+                        </div>
+                        <div class="banner_content p-3">
+                           <p class="m-0 fw-bold">Ricevi notifiche di nuovi
+                              messaggi</p>
+                           <a href="#" class="text-secondary">Attiva notifiche
+                              desktop</a>
+                        </div>
                      </div>
-                  </div>
-                  <div class="notify_banner d-flex align-items-center p-3">
-                     <div class="bell rounded-circle bg-white">
-                        <i class="fa fa-bell-slash" aria-hidden="true"></i>
+                     <div class="search_section">
+                        <div class="input-group input-group-sm p-2">
+   
+                           <span class="input-group-text bg-white border-0">
+                              <i class="fa fa-search" aria-hidden="true"></i>
+                           </span>
+                           <input type="text" class="form-control border-0"
+                              placeholder="Cerca o inizia una nuova chat">
+   
+                        </div>
                      </div>
-                     <div class="banner_content p-3">
-                        <p class="m-0 fw-bold">Ricevi notifiche di nuovi
-                           messaggi</p>
-                        <a href="#" class="text-secondary">Attiva notifiche
-                           desktop</a>
-                     </div>
-                  </div>
-                  <div class="search_section">
-                     <div class="input-group input-group-sm p-2">
-
-                        <span class="input-group-text bg-white border-0">
-                           <i class="fa fa-search" aria-hidden="true"></i>
-                        </span>
-                        <input type="text" class="form-control border-0"
-                           placeholder="Cerca o inizia una nuova chat">
-
-                     </div>
-                  </div>
-                  <ul class="list-unstyled contacts">
-                     <li v-for="(contact, i) in contacts">
-                        <div class="contact border-bottom border-secondary
-                           border-opacity-25 d-flex align-items-center p-2
-                           bg-light">
-                           <div class="user">
-                              <img width="50" :src="'./assets' + contact.avatar" alt="">
+                     <ul class="list-unstyled contacts">
+                        <li v-for="(contact, i) in contacts">
+                           <div class="contact border-bottom border-secondary
+                              border-opacity-25 d-flex align-items-center p-2
+                              bg-light">
+                              <div class="user">
+                                 <img width="50" :src="'./assets' + contact.avatar" alt="">
+                              </div>
+                              <div class="user_info">
+                                 <span class="px-3 m-0">{{contact.name}}</span><br>
+                                 <span class="px-3 last_message text-secondary
+                                    text-opacity-75">Ultimo messaggio</span>
+                              </div>
                            </div>
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="right_chat">
+                     <div class="right_header  d-flex align-items-center
+                     justify-content-between p-3">
+                        <div class="user d-flex">
+                           <img width="50" src="./assets/img/avatar_1.jpg" alt="">
                            <div class="user_info">
-                              <span class="px-3 m-0">{{contact.name}}</span><br>
+                              <span class="px-3">Michele</span><br>
                               <span class="px-3 last_message text-secondary
-                                 text-opacity-75">Ultimo messaggio</span>
+                              text-opacity-75">Ultimo accesso oggi alle 12:00</span>
                            </div>
                         </div>
-                     </li>
-                  </ul>
-               </div>
-               <div class="right_chat bg-danger">
-                  <div class="right_header  d-flex align-items-center
-                  justify-content-between p-3">
-                     <div class="user d-flex">
-                        <img width="50" src="./assets/img/avatar_1.jpg" alt="">
-                        <div class="user_info">
-                           <span class="px-3">Michele</span><br>
-                           <span class="px-3 last_message text-secondary
-                           text-opacity-75">Ultimo accesso oggi alle 12:00</span>
+                        <div class="header_icons text-secondary">
+                           <i class="fas fa-magnifying-glass"></i>
+                           <i class="fas fa-paperclip"></i>
+                           <i class="fas fa-ellipsis-v"></i>
                         </div>
                      </div>
-                     <div class="header_icons text-secondary">
-                        <i class="fas fa-magnifying-glass"></i>
-                        <i class="fas fa-paperclip"></i>
-                        <i class="fas fa-ellipsis-v"></i>
+                     <div class="chat_area">
+   
+                     </div>
+                     <div class="text_area">
+   
                      </div>
                   </div>
                </div>

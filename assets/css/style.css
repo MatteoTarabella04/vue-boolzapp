@@ -75,9 +75,19 @@ main {
 
 .right_chat {
    width: calc(100% - 30%);
+   background-image: url('../img/mine.jpg');
 }
 
 .right_header {
    height: 4.5rem;
    background-color: var(--bg-headers);
+}
+
+.chat_area {
+   height: calc(100% - 9rem);
+}
+
+.text_area {
+   height: 4.5rem;
+   background-color: var(--bg-input-chat);
 }
