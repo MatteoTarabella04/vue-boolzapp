@@ -65,7 +65,8 @@
                      </div>
                      <ul class="list-unstyled contacts">
                         <li v-for="(contact, i) in contacts"
-                           :class="activeContact === i ? 'active' : ''">
+                           :class="activeContact === i ? 'active' : ''"
+                           @click="activeContact = i">
                            <div class="contact border-bottom border-secondary
                               border-opacity-25 d-flex align-items-center
                               justify-content-between p-2">
@@ -94,12 +95,12 @@
                      <div class="right_header d-flex align-items-center
                         justify-content-between p-3">
                         <div class="user d-flex">
-                           <img width="50" src="./assets/img/avatar_1.jpg"
+                           <img width="50" :src="'./assets' + contacts[activeContact].avatar"
                               alt="">
                            <div class="user_info">
-                              <span class="px-3">Michele</span><br>
+                              <span class="px-3">{{contacts[activeContact].name}}</span><br>
                               <span class="px-3 last_message text-secondary
-                                 text-opacity-75">Ultimo accesso oggi alle 12:00</span>
+                                 text-opacity-75">Ultimo accesso oggi alle {{getRndInteger(00, 23)}}:{{getRndInteger(00, 59)}}</span>
                            </div>
                         </div>
                         <div class="header_icons text-secondary">
@@ -112,19 +113,11 @@
                      <!-- NEW SETUP -->
                      <div class="chat_area px-5 py-3 d-flex flex-column
                         flex-shrink-0">
-                        <div class="message">
-                           <div class="received">
-                              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                        <div class="message" v-for="msg in contacts[activeContact].messages">
+                           <div :class="msg.status == 'sent' ? 'sent' : 'received'">
+                              {{msg.message}}
                               <p class="m-0 message_time text-secondary text-end">
-                                 15:50
-                              </p>
-                           </div>
-                        </div>
-                        <div class="message">
-                           <div class="sent">
-                              Lorem ipsum dolor sit amet consectetur.
-                              <p class="m-0 message_time text-secondary text-end">
-                                 15:50
+                                 {{msg.date.slice(10,16)}}
                               </p>
                            </div>
                         </div>
