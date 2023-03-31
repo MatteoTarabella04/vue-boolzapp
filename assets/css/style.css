@@ -14,6 +14,15 @@ main {
    height: 4.5rem;
 }
 
+.user img {
+   border-radius: 50%;
+}
+
+.left_icons i {
+   padding-left: 1rem;
+   font-size: 1.3rem;
+}
+
 .right_chat {
    width: calc(100% - 30%);
 }
