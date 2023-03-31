@@ -55,6 +55,10 @@ main {
    font-size: 0.8rem;
 }
 
+.search_section {
+   background-color: var(--bg-headers);
+}
+
 .right_chat {
    width: calc(100% - 30%);
 }
