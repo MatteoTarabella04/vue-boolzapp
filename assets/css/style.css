@@ -1,3 +1,13 @@
+:root {
+   --bg-notify-banner: #8edafc;
+   --bg-message: #d5f9ba;
+   --bg-input-chat: #f3eeea;
+   --bg-headers: #eaeaea;
+   --bg-main-1: #009688;
+   --bg-main-2: #dbdbd2;
+}
+
+
 body {
    font-family: sans-serif;
 }
@@ -12,7 +22,8 @@ main {
 
 .left_header {
    height: 4.5rem;
-   cursor:default;
+   cursor: default;
+   background-color: var(--bg-headers);
 }
 
 .user img {
@@ -26,10 +37,29 @@ main {
    cursor: pointer;
 }
 
+.notify_banner {
+   height: 4.5rem;
+   background-color: var(--bg-notify-banner);
+}
+
+.bell {
+   padding: 0.5rem;
+}
+
+.bell i {
+   color: var(--bg-notify-banner);
+   padding: 0.2rem;
+}
+
+.banner_content {
+   font-size: 0.8rem;
+}
+
 .right_chat {
    width: calc(100% - 30%);
 }
 
 .right_header {
    height: 4.5rem;
+   background-color: var(--bg-headers);
 }
