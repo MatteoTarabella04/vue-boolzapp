@@ -30,7 +30,8 @@
                      <div class="left_header d-flex align-items-center
                         justify-content-between border-end p-2">
                         <div class="user">
-                           <img width="50" src="./assets/img/avatar_io.jpg" alt=""
+                           <img width="50" src="./assets/img/avatar_io.jpg"
+                              alt=""
                               class="img-fluid">
                            <b class="ps-1">Sofia</b>
                         </div>
@@ -52,26 +53,29 @@
                         </div>
                      </div>
                      <div class="search_section border-bottom border-secondary
-                     border-opacity-25">
+                        border-opacity-25">
                         <div class="input-group input-group-sm p-2">
-   
+
                            <span class="input-group-text bg-white border-0">
                               <i class="fa fa-search" aria-hidden="true"></i>
                            </span>
                            <input type="text" class="form-control border-0"
                               placeholder="Cerca o inizia una nuova chat">
-   
                         </div>
                      </div>
                      <ul class="list-unstyled contacts">
-                        <li v-for="(contact, i) in contacts" :class="activeContact === i ? 'active' : ''">
+                        <li v-for="(contact, i) in contacts"
+                           :class="activeContact === i ? 'active' : ''">
                            <div class="contact border-bottom border-secondary
-                              border-opacity-25 d-flex align-items-center justify-content-between p-2">
+                              border-opacity-25 d-flex align-items-center
+                              justify-content-between p-2">
                               <div class="user d-flex">
-                                 <img width="50" :src="'./assets' + contact.avatar" alt="">
+                                 <img width="50" :src="'./assets' +
+                                    contact.avatar" alt="">
                                  <div class="user_info">
                                     <span class="px-3 m-0">{{contact.name}}</span><br>
-                                    <span class="px-3 last_message text-secondary
+                                    <span class="px-3 last_message
+                                       text-secondary
                                        text-opacity-75">
                                        Ultimo messaggio
                                     </span>
@@ -87,14 +91,15 @@
                      </ul>
                   </div>
                   <div class="right_chat">
-                     <div class="right_header  d-flex align-items-center
-                     justify-content-between p-3">
+                     <div class="right_header d-flex align-items-center
+                        justify-content-between p-3">
                         <div class="user d-flex">
-                           <img width="50" src="./assets/img/avatar_1.jpg" alt="">
+                           <img width="50" src="./assets/img/avatar_1.jpg"
+                              alt="">
                            <div class="user_info">
                               <span class="px-3">Michele</span><br>
                               <span class="px-3 last_message text-secondary
-                              text-opacity-75">Ultimo accesso oggi alle 12:00</span>
+                                 text-opacity-75">Ultimo accesso oggi alle 12:00</span>
                            </div>
                         </div>
                         <div class="header_icons text-secondary">
@@ -103,8 +108,29 @@
                            <i class="fas fa-ellipsis-v"></i>
                         </div>
                      </div>
-                     <div class="chat_area m-5">
-                        <div class="row recived_section justify-content-start">
+
+                     <!-- NEW SETUP -->
+                     <div class="chat_area px-5 py-3 d-flex flex-column
+                        flex-shrink-0">
+                        <div class="message">
+                           <div class="received">
+                              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                              <p class="m-0 message_time text-secondary text-end">
+                                 15:50
+                              </p>
+                           </div>
+                        </div>
+                        <div class="message">
+                           <div class="sent">
+                              Lorem ipsum dolor sit amet consectetur.
+                              <p class="m-0 message_time text-secondary text-end">
+                                 15:50
+                              </p>
+                           </div>
+                        </div>
+
+                        <!-- OLD SETUP -->
+                        <!-- <div class="row recived_section justify-content-start">
                            <div class="recived">
                               <span>
                                  <img class="img-fluid" src="./assets/img/avatar_2.jpg" alt="">
@@ -121,14 +147,17 @@
                                  15:50
                               </p>
                            </div>
-                        </div>
+                        </div> -->
                      </div>
-                     <div class="text_area d-flex align-items-center justify-content-evenly">
+                     <div class="text_area d-flex align-items-center
+                        justify-content-evenly">
                         <div class="emoji text-secondary">
                            <i class="fa-regular fa-face-smile"></i>
                         </div>
                         <div class="text_section">
-                           <input type="text" name="chat" id="chatInput" placeholder="Scrivi messaggio" class="form-control border-0">
+                           <input type="text" name="chat" id="chatInput"
+                              placeholder="Scrivi messaggio" class="form-control
+                              border-0">
                         </div>
                         <div class="rec text-secondary">
                            <i class="fa fa-microphone" aria-hidden="true"></i>

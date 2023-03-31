@@ -70,7 +70,7 @@ main {
    height: 4.5rem;
 }
 
-.contacts > li.active {
+.contacts>li.active {
    background-color: var(--bg-headers);
 }
 
@@ -94,23 +94,33 @@ main {
 }
 
 .chat_area {
-   height: calc(100% - 15rem);
+   height: calc(100% - 9rem);
 }
 
-.recived {
+.message {
+   flex-basis: 4.5rem;
+   flex-shrink: 0;
+   padding: 0.3rem;
+}
+
+
+.received {
    background-color: white;
-   padding: 0.7rem;
-   width: 35%;
+   padding: 0.6rem;
+   width: 40%;
+   min-width: min-content;
+   min-height: 3rem;
    border-radius: 0.5rem;
-   margin-bottom: 0.5rem;
 }
 
 .sent {
    background-color: var(--bg-message);
-   padding: 0.7rem;
-   width: 35%;
+   padding: 0.6rem;
+   width: 40%;
+   min-width: min-content;
+   min-height: 3rem;
+   margin-left: auto;
    border-radius: 0.5rem;
-   margin-bottom: 0.5rem;
 }
 
 .recived span {
@@ -119,7 +129,6 @@ main {
 
 .message_time {
    font-size: 0.6rem;
-   padding: 0.2rem;
 }
 
 .text_area {
