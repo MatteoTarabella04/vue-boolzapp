@@ -70,7 +70,15 @@ main {
    height: 4.5rem;
 }
 
+.contacts > li.active {
+   background-color: var(--bg-headers);
+}
+
 .last_message {
+   font-size: 0.7rem;
+}
+
+.time_contact {
    font-size: 0.7rem;
 }
 

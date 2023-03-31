@@ -51,7 +51,8 @@
                               desktop</a>
                         </div>
                      </div>
-                     <div class="search_section">
+                     <div class="search_section border-bottom border-secondary
+                     border-opacity-25">
                         <div class="input-group input-group-sm p-2">
    
                            <span class="input-group-text bg-white border-0">
@@ -63,17 +64,23 @@
                         </div>
                      </div>
                      <ul class="list-unstyled contacts">
-                        <li v-for="(contact, i) in contacts">
+                        <li v-for="(contact, i) in contacts" :class="activeContact === i ? 'active' : ''">
                            <div class="contact border-bottom border-secondary
-                              border-opacity-25 d-flex align-items-center p-2
-                              bg-light">
-                              <div class="user">
+                              border-opacity-25 d-flex align-items-center justify-content-between p-2">
+                              <div class="user d-flex">
                                  <img width="50" :src="'./assets' + contact.avatar" alt="">
+                                 <div class="user_info">
+                                    <span class="px-3 m-0">{{contact.name}}</span><br>
+                                    <span class="px-3 last_message text-secondary
+                                       text-opacity-75">
+                                       Ultimo messaggio
+                                    </span>
+                                 </div>
                               </div>
-                              <div class="user_info">
-                                 <span class="px-3 m-0">{{contact.name}}</span><br>
-                                 <span class="px-3 last_message text-secondary
-                                    text-opacity-75">Ultimo messaggio</span>
+                              <div class="time_contact d-flex h-100">
+                                 <span class="text-secondary">
+                                    12:00
+                                 </span>
                               </div>
                            </div>
                         </li>
