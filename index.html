@@ -60,16 +60,17 @@
                               <i class="fa fa-search" aria-hidden="true"></i>
                            </span>
                            <input type="text" class="form-control border-0"
-                              placeholder="Cerca o inizia una nuova chat">
+                              placeholder="Cerca o inizia una nuova chat" v-model="searchInput">
                         </div>
                      </div>
                      <ul class="list-unstyled contacts">
                         <li v-for="(contact, i) in contacts"
-                           :class="activeContact === i ? 'active' : ''"
-                           @click="activeContact = i">
+                           :class="activeContact == i ? 'active' : ''"
+                           @click="activeContact = i, searchInput = ''">
                            <div class="contact border-bottom border-secondary
                               border-opacity-25 d-flex align-items-center
-                              justify-content-between p-2">
+                              justify-content-between p-2"
+                              :class="contact.name.toLowerCase().includes(searchInput.toLowerCase()) ? '' : 'd-none'">
                               <div class="user d-flex">
                                  <img width="50" :src="'./assets' +
                                     contact.avatar" alt="">

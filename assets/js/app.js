@@ -19,6 +19,7 @@ createApp({
       return {
          activeContact: 0,
          newMessage: "",
+         searchInput: "",
          contacts: [
             {
                name: 'Michele',
@@ -238,6 +239,6 @@ createApp({
             }
             this.contacts[this.activeContact].messages.push(receivedMessage);
          }, 1000);
-      }
+      },
    }
 }).mount('#app');
