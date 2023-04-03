@@ -226,6 +226,18 @@ createApp({
          }
          this.contacts[this.activeContact].messages.push(myMessage);
          this.newMessage = '';
+
+         this.receivedMsg();
+      },
+      receivedMsg() {
+         setTimeout(() => {
+            const receivedMessage = {
+               date: this.getDateAndTime(),
+               message: 'OK!',
+               status: 'received',
+            }
+            this.contacts[this.activeContact].messages.push(receivedMessage);
+         }, 1000);
       }
    }
 }).mount('#app');
