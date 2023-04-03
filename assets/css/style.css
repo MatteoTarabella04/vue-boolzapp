@@ -44,7 +44,14 @@ main {
 }
 
 .bell {
+   width: 50px;
+   aspect-ratio: 1;
    padding: 0.5rem;
+
+   /* flex */
+   display: flex;
+   align-items: center;
+   justify-content: center;
 }
 
 .bell i {
@@ -95,6 +102,7 @@ main {
 
 .chat_area {
    height: calc(100% - 9rem);
+   overflow-y: auto;
 }
 
 .message {
