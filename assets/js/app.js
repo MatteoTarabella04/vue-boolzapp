@@ -225,6 +225,7 @@ createApp({
             status: 'sent',
          }
          this.contacts[this.activeContact].messages.push(myMessage);
+         this.newMessage = '';
       }
    }
 }).mount('#app');
