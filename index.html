@@ -100,7 +100,7 @@
                            <div class="user_info">
                               <span class="px-3">{{contacts[activeContact].name}}</span><br>
                               <span class="px-3 last_message text-secondary
-                                 text-opacity-75">Ultimo accesso oggi alle {{getRndInteger(00, 23)}}:{{getRndInteger(00, 59)}}
+                                 text-opacity-75">Ultimo accesso oggi alle {{getTime()}}
                               </span>
                            </div>
                         </div>
@@ -149,9 +149,9 @@
                            <i class="fa-regular fa-face-smile"></i>
                         </div>
                         <div class="text_section">
-                           <input type="text" name="chat" id="chatInput"
+                           <input type="text" name="newMessage" id="newMessage"
                               placeholder="Scrivi messaggio" class="form-control
-                              border-0">
+                              border-0" v-model.trim="newMessage" @keydown.enter="newMsg">
                         </div>
                         <div class="rec text-secondary">
                            <i class="fa fa-microphone" aria-hidden="true"></i>

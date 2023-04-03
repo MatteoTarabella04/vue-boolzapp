@@ -18,6 +18,7 @@ createApp({
    data() {
       return {
          activeContact: 0,
+         newMessage: "",
          contacts: [
             {
                name: 'Michele',
@@ -184,8 +185,46 @@ createApp({
       }
    },
    methods: {
-      getRndInteger(min, max) {
+      /* getRndInteger(min, max) {
          return Math.floor(Math.random() * (max - min + 1)) + min;
+      }, */
+      /* removed rndm integer for last log usage */
+      /* get time for last log */
+      getTime() {
+         let time = new Date();
+         time = time.toLocaleTimeString();
+         time = time.slice(0, 5)
+         console.log(time);
+         return time;
+      },
+      /* get date + time and convert to string for message object */
+      getDateAndTime() {
+         const now = new Date();
+         const date = now.toLocaleDateString('it-IT', {
+            day: '2-digit', month: '2-digit', year: 'numeric',
+         });
+         let h = now.getHours();
+         if (h < 10) {
+            h = `0${h.toString()}`;
+         }
+         let min = now.getMinutes();
+         if (min < 10) {
+            min = `0${min.toString()}`;
+         }
+         let sec = now.getSeconds();
+         if (sec < 10) {
+            sec = `0${sec.toString()}`;
+         }
+         return `${date} ${h}:${min}:${sec}`;
+      },
+      /* create object w new writted messsage, capitalize it and push it to the messages array of active contact */
+      newMsg() {
+         const myMessage = {
+            date: this.getDateAndTime(),
+            message: this.newMessage.charAt(0).toUpperCase() + this.newMessage.slice(1),
+            status: 'sent',
+         }
+         this.contacts[this.activeContact].messages.push(myMessage);
       }
    }
 }).mount('#app');
