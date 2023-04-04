@@ -131,6 +131,15 @@ main {
    border-radius: 0.5rem;
 }
 
+.dropdown i {
+   display: none;
+}
+
+.sent:hover > .dropdown i, 
+.received:hover > .dropdown i {
+   display: block;
+}
+
 .recived span {
    font-size: 0.9rem;
 }
@@ -138,6 +147,7 @@ main {
 .message_time {
    font-size: 0.6rem;
 }
+
 
 .text_area {
    height: 4.5rem;
