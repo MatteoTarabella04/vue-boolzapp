@@ -220,15 +220,20 @@ createApp({
       },
       /* create object w new writted messsage, capitalize it and push it to the messages array of active contact */
       newMsg() {
-         const myMessage = {
-            date: this.getDateAndTime(),
-            message: this.newMessage.charAt(0).toUpperCase() + this.newMessage.slice(1),
-            status: 'sent',
-         }
-         this.contacts[this.activeContact].messages.push(myMessage);
-         this.newMessage = '';
+         if (this.newMessage == '') {
+            return;
+         } else {
+            const myMessage = {
+               date: this.getDateAndTime(),
+               message: this.newMessage.charAt(0).toUpperCase() + this.newMessage.slice(1),
+               status: 'sent',
+            }
+            this.contacts[this.activeContact].messages.push(myMessage);
+            this.newMessage = '';
 
-         this.receivedMsg();
+            this.receivedMsg();
+         }
+
       },
       receivedMsg() {
          setTimeout(() => {
