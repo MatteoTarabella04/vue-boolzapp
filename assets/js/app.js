@@ -182,13 +182,21 @@ createApp({
                   }
                ],
             },
+         ],
+         answers: [
+            'Certo che si!',
+            'No oggi non mi va',
+            'Tutto bene grazie, tu ?',
+            'Ok va bene. Ti va di giocare a padel questa sera?',
+            'Domani non ci sono. Facciamo un altro giorno ?',
+            'Daje'
          ]
       }
    },
    methods: {
-      /* getRndInteger(min, max) {
-         return Math.floor(Math.random() * (max - min + 1)) + min;
-      }, */
+      getRndInteger(max) {
+         return Math.floor(Math.random() * (max + 1));
+      },
       /* removed rndm integer for last log usage */
       /* get time for last log */
       getTime() {
@@ -239,7 +247,7 @@ createApp({
          setTimeout(() => {
             const receivedMessage = {
                date: this.getDateAndTime(),
-               message: 'OK!',
+               message: this.answers[this.getRndInteger(this.answers.length)],
                status: 'received',
             }
             this.contacts[this.activeContact].messages.push(receivedMessage);
