@@ -256,5 +256,19 @@ createApp({
       deleteMsg(message) {
          this.contacts[this.activeContact].messages.splice(this.contacts[this.activeContact].messages.indexOf(message), 1)
       },
+      showMsgs(contact) {
+         if (contact.messages.length > 0) {
+           return contact.messages[contact.messages.length - 1].message;
+         } else {
+            return contact.messages.message;
+         }
+      },
+      showDate(contact) {
+         if (contact.messages.length > 0) {
+           return contact.messages[contact.messages.length - 1].date.slice(0,10);
+         } else {
+            return contact.messages.date;
+         }
+      },
    }
 }).mount('#app');

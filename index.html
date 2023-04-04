@@ -79,13 +79,13 @@
                                     <p class="px-3 last_message
                                        text-secondary
                                        text-opacity-75 m-0">
-                                       {{contact.messages[contact.messages.length - 1].message}}
+                                       {{showMsgs(contact)}}
                                     </p>
                                  </div>
                               </div>
                               <div class="time_contact d-flex h-100">
                                  <span class="text-secondary">
-                                    {{contact.messages[contact.messages.length - 1].date.slice(0,10)}}
+                                    {{showDate(contact)}}
                                  </span>
                               </div>
                            </div>
