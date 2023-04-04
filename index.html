@@ -75,17 +75,17 @@
                                  <img width="50" :src="'./assets' +
                                     contact.avatar" alt="">
                                  <div class="user_info">
-                                    <span class="px-3 m-0">{{contact.name}}</span><br>
-                                    <span class="px-3 last_message
+                                    <span class=" mx-3">{{contact.name}}</span><br>
+                                    <p class="px-3 last_message
                                        text-secondary
-                                       text-opacity-75">
-                                       Ultimo messaggio
-                                    </span>
+                                       text-opacity-75 m-0">
+                                       {{contact.messages[contact.messages.length - 1].message}}
+                                    </p>
                                  </div>
                               </div>
                               <div class="time_contact d-flex h-100">
                                  <span class="text-secondary">
-                                    12:00
+                                    {{contact.messages[contact.messages.length - 1].date.slice(0,10)}}
                                  </span>
                               </div>
                            </div>
