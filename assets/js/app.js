@@ -245,5 +245,8 @@ createApp({
             this.contacts[this.activeContact].messages.push(receivedMessage);
          }, 1000);
       },
+      deleteMsg(message) {
+         this.contacts[this.activeContact].messages.splice(this.contacts[this.activeContact].messages.indexOf(message), 1)
+      },
    }
 }).mount('#app');

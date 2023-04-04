@@ -121,7 +121,7 @@
                                  <i class="fa fa-angle-down" type="button" data-bs-toggle="dropdown" aria-hidden="true"></i>
                                  <ul :class="msg.status == 'sent' ? '' : 'dropdown-menu-end'" class="dropdown-menu shadow border-0">
                                     <li><a class="dropdown-item" href="#">Message info</a></li>
-                                    <li><a class="dropdown-item" href="#">Delete message</a></li>
+                                    <li @click="deleteMsg(msg)" ><a class="dropdown-item" href="#">Delete message</a></li>
                                   </ul>
                               </div>
                               {{msg.message}}
